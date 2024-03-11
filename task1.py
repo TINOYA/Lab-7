@@ -2,7 +2,7 @@ import numpy as np
 import random
 import time
 
-# Создание двух массивов в 1 миллион элементов, заполненных случайными значениями чисел
+# Создание двух массивов в 1 миллион элементов, заполненных случайными значениями чиселee
 lst1 = [random.random() for _ in range(1000000)]
 lst2 = [random.random() for _ in range(1000000)]
 arr1 = np.array(lst1)
