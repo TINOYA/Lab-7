@@ -2,25 +2,25 @@ import matplotlib.pyplot as plt
 import csv
 
 
-X = []
-Y = []
-Z = []
-Zsec = []
-sec = 60
+x = []
+y = []
+z = []
+zsec = []
+SEC = 60
 
 with open('data1.csv', 'r') as datafile:
     plotting = csv.reader(datafile, delimiter=';')
     
-    for ROWS in plotting:
-        X.append(float(ROWS[0]))
-        Y.append(float(ROWS[3]))
-        Z.append(float(ROWS[4]))
+    for row in plotting:
+        x.append(float(row[0]))
+        y.append(float(row[3]))
+        z.append(float(row[4]))
         
-Zsec = [num / sec for num in Z]
+zsec = [num / SEC for num in z]
         
 
-plt.plot(X, Y)
-plt.plot(X, Zsec)
+plt.plot(x, y)
+plt.plot(x, zsec)
 plt.title('Графики')
 plt.xlabel('time,sec')
 plt.ylabel('Положение заслонки(%) и Обороты двигателя(Об/сек)')

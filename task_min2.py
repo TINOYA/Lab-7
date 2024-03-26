@@ -2,22 +2,22 @@ import matplotlib.pyplot as plt
 import csv
 
 
-X = []
-Y = []
-Z = []
+x = []
+y = []
+z = []
 
 
 with open('data1.csv', 'r') as datafile:
     plotting = csv.reader(datafile, delimiter=';')
     
-    for ROWS in plotting:
-        X.append(float(ROWS[0]))
-        Y.append(float(ROWS[3]))
-        Z.append(float(ROWS[4]))
+    for rows in plotting:
+        x.append(float(rows[0]))
+        y.append(float(rows[3]))
+        z.append(float(rows[4]))
         
         
-plt.plot(X, Y)
-plt.plot(X, Z)
+plt.plot(x, y)
+plt.plot(x, z)
 plt.title('Графики')
 plt.xlabel('time,sec')
 plt.ylabel('Положение заслонки(%) и обороты(об/мин)')

@@ -13,8 +13,8 @@ ax = fig.add_subplot(111, projection='3d')
 
 ax.plot(x, y, z)
 
-ax.set_xlabel('X')
-ax.set_ylabel('Y')
-ax.set_zlabel('Z')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+ax.set_zlabel('z')
 
 plt.show()
